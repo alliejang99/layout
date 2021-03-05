@@ -6,10 +6,10 @@ function Footer() {
 
             <address>
                 <ul className="menu">
-                    <li>about</li>
-                    <li>Contact Us</li>
-                    <li>Privacy</li>
-                    <li>Terms of Service</li>
+                    <li><a href="#-about">about</a></li>
+                    <li><a href="#-Contact">Contact Us</a></li>
+                    <li><a href="#-Privacy">Privacy</a></li>
+                    <li><a href="#-Terms">Terms of Service</a></li>
                 </ul>
                 <p className="copyrights">Copyrights Â© 2013</p>
             </address>

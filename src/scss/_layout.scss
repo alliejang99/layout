@@ -737,11 +737,13 @@
     .menu {
         display: flex;
 
+        a {
+            color: #fff;
+        }
         li {
             position: relative;
             padding: 0 5px;
             font-size: 12px;
-            color: #fff;
             cursor: pointer;
 
             &:after {
