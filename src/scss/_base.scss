@@ -5,6 +5,7 @@
 }
 body {
     overflow-x: hidden;
+	background: #333;
 }
 
 li,
@@ -26,4 +27,16 @@ button,input {
 }
 button,select {
 	text-transform:none;
+}
+
+address {
+	text-decoration: none;
+	font-style: normal;
+	text-transform: capitalize;
+}
+
+a {
+	text-decoration: none;
+	font-style: normal;
+	color: #000;
 }
