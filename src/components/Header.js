@@ -14,7 +14,7 @@ function Header() {
                         color: '#fff'
                     }}
                 />
-                <span className="search">search</span>
+                <span className="search"></span>
             </button>
 
             {/* info */}

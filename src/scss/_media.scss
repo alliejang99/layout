@@ -1,13 +1,10 @@
 @media (max-width: 1700px) {
-    .columns{ 
-        .userKocht {
-            .kocht {
-                .groupIcon {
-                    padding-left: 20px;
-                    .text {
-                        padding-left: 20px;
-                    }
-                }
+    .columns .userKocht .kocht {
+        .groupIcon {
+            padding-left: 20px;
+            transition: all .3s;
+            .text {
+                padding-left: 20px;
             }
         }
     }
@@ -29,33 +26,35 @@
 
                 .groupIcon {
                     padding-left: 30px;
-                    
+                    transition: all .3s;
                     .text {
                         padding-left: 30px;
                     }
                 }
 
-                .vsKocht {
-                    
-                    .vsBox {
-                        width: 40vw;
-                    }
+                .vsKocht .vsBox {
+                    width: 40vw;
                 }
             }
         }
     }
-    .nav {
-        .navService {
-            .serviceTable {
-                height: 885px;
-            }
-        }
+    .nav .navService  .serviceTable {
+        height: 885px;
     }
     
     .paging{
         justify-content: start;        
     }
 }
+
+@media (max-width: 1090px) {
+    .nav .navService  .serviceTable {
+        height: 1270px;
+    }
+    .basic .basicList {
+        display: block;
+    }
+} 
 
 @media (max-width: 905px) {
     .nav {
@@ -75,12 +74,6 @@
         float: left;
         margin: 10px 10px 10px 10px;
     }
-
-    .columns {
-        .userKocht {
-            .kochtTitle {}
-        }
-    }
 }
 
 @media (max-width: 730px) {
@@ -90,7 +83,34 @@
         float: left;
         margin: 10px 10px 10px 10px;
     }
+    .analytics .boardBox .boardTit,
+    .analytics .boardBox .boardTxt,
+    .serviceList .boardBox .boardTit,
+    .analytics .boardBox .boardTxt li, 
+    .serviceList .boardBox .boardTxt li {
+        padding: 0;
+        line-height: 40px;
+    }
+    .serviceList .boardBox .boardTit {
+        .num    {flex: 0 0 5%;}
+        .serveN {flex: 0 0 20%;}
+        .ver    {flex: 0 0 8%;}
+        .sum1   {flex: 0 0 15%;}
+        .sum2   {flex: 0 0 20%;}
+        .sum3   {flex: 0 0 15%;}
+        .sum4   {flex: 0 0 15%;}
+    }
+    .serviceList .boardBox .boardTxt {
+        .num    {flex: 0 0 5%;}
+        .serveN {flex: 0 0 20%;}
+        .ver    {flex: 0 0 8%;}
+        .sum1   {flex: 0 0 15%;}
+        .sum2   {flex: 0 0 20%;}
+        .sum3   {flex: 0 0 15%;}
+        .sum4   {flex: 0 0 15%;}
+    }
 }
+
 @media (max-width: 690px) {
     .paging {
         display: flex;
@@ -107,5 +127,77 @@
         position: absolute;
         bottom: auto;
         right: auto;
+    }
+}
+
+@media (max-width: 675px) {
+    .columns .userKocht .kocht .groupIcon,
+    .columns .userKocht .kocht .groupIcon .text {
+        padding-left: 5px;
+        transition: all .3s;
+    }
+}
+
+@media (max-width: 655px) {
+    .header .searchBox {
+        margin: 0 5px;
+    }
+
+    .contents {
+        width: 94vw;
+    }
+    .columns .userKocht .kocht .groupIcon {
+        width: 24px;
+        height: 24px;
+        
+        .iconBar1 {
+            position: absolute;
+            top: 55px;
+            left: 5px;
+            content: '';
+            width: 20px;
+            height: 5px;
+            border-radius: 3px;
+            background: #fff;
+            cursor: pointer;
+            transition: all .3s;
+        }
+        .iconBar2 {
+            position: absolute;
+            top: 55px;
+            left: 5px;
+            transform: rotate(90deg);
+            content: '';
+            width: 20px;
+            height: 5px;
+            border-radius: 3px;
+            background: #fff;
+            cursor: pointer;
+            transition: all .3s;
+        }
+        .text {
+            display: none;
+        }
+    }
+}
+@media (max-width: 560px) {
+    .contents {
+        width: 93vw;
+    }
+}
+@media (max-width: 360px) {
+    .paging ul {
+        
+        li {
+            width: 20px;
+            height: 20px;
+            font-size: 14px;
+            line-height: 20px;
+            margin: 0 1px 0 1px;
+        }
+        
+        .btnPage {
+            margin: 0;
+        }
     }
 }
