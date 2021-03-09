@@ -53,6 +53,10 @@
     }
     .basic .basicList {
         display: block;
+        
+        .flex {
+            margin-top: 10px;
+        }
     }
 } 
 
@@ -73,6 +77,10 @@
         height: 100%;
         float: left;
         margin: 10px 10px 10px 10px;
+    }
+
+    .paging ul {
+        padding-right: 0;
     }
 }
 
@@ -179,10 +187,41 @@
             display: none;
         }
     }
+
+    .popup .message {
+        width: 400px;
+        height: 500px;
+        transition: all .3s;
+
+        .messageText {
+            width: 360px;
+            height: 400px;
+            transition: all .3s;
+        }
+    }
 }
 @media (max-width: 560px) {
     .contents {
         width: 93vw;
+    }
+}
+@media (max-width: 500px) {
+    .popup .message {
+        width: 300px;
+        height: 400px;
+        transition: all .3s;
+
+        .messageText {
+            width: 260px;
+            height: 300px;
+            transition: all .3s;
+        }
+    }
+    .popup .message .btnYN {
+        top: 85%;
+        .btnValue {
+            width: 100px;
+        }
     }
 }
 @media (max-width: 360px) {

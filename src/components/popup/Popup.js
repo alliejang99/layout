@@ -13,8 +13,6 @@ function Popup() {
                     I do not stand here as advocate for any partisan cause, forth issues are fundamental and reach quite beyond the realm of partisan consideration. They must be resolved on the highest plane of national interest if our course is to prove sound and our future protected.
                     I do not stand here as advocate for any partisan cause, forth issues are fundamental and reach quite beyond the realm of partisan consideration. They must be resolved on the highest plane of national interest if our course is to prove sound and our future protected.
                     I do not stand here as advocate for any partisan cause, forth issues are fundamental and reach quite beyond the realm of partisan consideration. They must be resolved on the highest plane of national interest if our course is to prove sound and our future protected.
-                    I do not stand here as advocate for any partisan cause, forth issues are fundamental and reach quite beyond the realm of partisan consideration. They must be resolved on the highest plane of national interest if our course is to prove sound and our future protected.
-                    I do not stand here as advocate for any partisan cause, forth issues are fundamental and reach quite beyond the realm of partisan consideration. They must be resolved on the highest plane of national interest if our course is to prove sound and our future protected.
                 </p>
 
                 <div className="btnYN">

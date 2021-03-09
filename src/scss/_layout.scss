@@ -91,7 +91,6 @@
     width: 200px;
     height: 100%;
     background: rgba(0, 0, 0, 0.1);
-    transition: none;
     
     .navService {
         /* service */
@@ -799,6 +798,7 @@
     display: block;
 }
 .popup {
+    display: none;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -806,8 +806,7 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    display: none;
-
+    
     .message {
         position: absolute;
         left: 50%;
@@ -823,7 +822,7 @@
         font-size: 18px;
         color: #7085B6;
         background: #fff;
-        
+        transition: all .3s;
         .messageText {
             position: absolute;
             top: 20px;
@@ -835,8 +834,8 @@
 
         .btnX {
             position: absolute;
-            right: -15px;
             top: -15px;
+            right: -15px;
             width: 30px;
             height: 30px;
             border-radius: 50%;
@@ -930,10 +929,12 @@
     padding-top: 5px;
     font-family: $font-sub;
     font-size: 14px;
+    z-index: 1;
 
     ul {
         display: flex;
         align-items: center;
+        padding-right: 180px;
         color: #fff;
        
         li {
