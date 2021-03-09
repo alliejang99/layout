@@ -3,7 +3,7 @@ import React from 'react';
 function Basic() {
     return (
         <section className="basic">
-            <h2>기본지표</h2>
+            <h2>Basic Indicators</h2>
             <div className="basicList">
                 <div className="dau flex">
                     <div className="mainTitle">dau</div>

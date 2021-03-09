@@ -1,11 +1,15 @@
 * {
     margin: 0;
     padding: 0;
-    user-select: none;
+	cursor: default;
 }
 body {
+	position: relative;
     overflow-x: hidden;
-	background: #333;
+	background-image: linear-gradient(-255deg, #7085B6 0%, #87A7D9 50%, #DEF3F8 100%);
+	width: 100%;
+    max-width: 100%;
+    min-width: 100%;
 }
 
 li,
@@ -38,4 +42,34 @@ address {
 a {
 	text-decoration: none;
 	font-style: normal;
+}
+
+/***** common *****/
+.num {
+    flex: 0 0 5%;
+    text-align: center;
+}
+.serveN {
+    flex: 0 0 10%;
+    text-align: center;
+}
+.ver { 
+    flex: 0 0 5%;
+    text-align: center;
+}
+.sum1 {
+    flex: 0 0 15%;
+    text-align: center;
+}
+.sum2 {
+    flex: 0 0 15%;
+    text-align: center;
+}
+.sum3 {
+    flex: 0 0 15%;
+    text-align: center;
+}
+.sum4 {
+    flex: 0 0 15%;
+    text-align: center;
 }

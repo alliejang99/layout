@@ -4,6 +4,7 @@ import Columns from './Columns';
 import Analytics from './Analytics';
 import Service from './Service';
 import Basic from './Basic';
+import Paging from '../Button/Paging';
 // import TabMenu from './TabMenu';
 
 function Contents() {
@@ -15,8 +16,8 @@ function Contents() {
           <Analytics />
           <Service />
           <Basic />
-          {/* <TabMenu /> */}
         </div>
+        <Paging />
       </div>
   )
 }
