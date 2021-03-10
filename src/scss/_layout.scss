@@ -27,6 +27,17 @@
         border: 2px solid rgba(255, 255, 255, 0.8);
         border-radius: 3px;
         cursor: pointer;
+
+        .search {
+            width: 100%;
+            height: 100%;
+            outline: none;
+            font-family: $font-sub;
+            font-weight: normal;
+            font-size: 14px;
+            letter-spacing: 1px;
+            color: #fff;
+        }
     }
 
     .info {
@@ -89,7 +100,6 @@
 .nav {
     float: left;
     width: 200px;
-    height: 100%;
     background: rgba(0, 0, 0, 0.1);
     
     .navService {
@@ -189,7 +199,7 @@
     box-shadow: 0 2px 5px rgba(0,0,0,0.2), 0 3px 8px rgba(0,0,0,0.1);
 
     .dateBox {
-        width: 100px;
+        width: 70px;
         height: 30px;
         border: 2px solid #fff;
         border-radius: 2px;
@@ -197,13 +207,6 @@
         font-weight: normal;
         color: #fff;
         cursor: pointer;
-
-        &:after {
-            content: '▼';
-            padding-left: 10px;
-            color: #fff;
-            cursor: pointer;
-        }
     }
     .line {
         margin: 10px;
@@ -218,13 +221,6 @@
         font-weight: normal;
         color: #fff;
         cursor: pointer;
-
-        &:after {
-            content: '▼';
-            padding-left: 10px;
-            color: #fff;
-            cursor: pointer;
-        }
     }
 }
 
@@ -454,18 +450,19 @@
                 text-overflow: ellipsis;
                 overflow: hidden;
 
-                &:nth-child(2) {
-                    color: #526aa1;
-                    cursor: pointer;
+            }
+            .serveN {
+                color: #526aa1;
+                cursor: pointer;
 
-                    &:hover {
-                        text-decoration: underline;
-                    }
+                &:hover {
+                    text-decoration: underline;
                 }
             }
         }
     }
 }
+
 
 /***** serviceList *****/
 .serviceList {
@@ -482,6 +479,7 @@
         font-family: $font-sub;
         font-weight: normal;
         color: #fff;
+        overflow: hidden;
 
         .boardTit {
             display: flex;
@@ -510,6 +508,7 @@
             align-items: center;
             min-height: 30px;
             min-width: 100px;
+            padding: 0 5px;
             background: rgba(255, 255, 255, 0.3);
         &:last-child {
             border-bottom-left-radius: 3px;
@@ -517,26 +516,38 @@
         }
 
             li {
-                padding: 10px 10px 0 10px;
+                display: block;
+                padding: 10px 0 0 0;
                 min-height: 30px;
                 font-size: 14px;
                 text-overflow:ellipsis;
                 white-space: nowrap;
                 overflow: hidden;
+            }
+            .serveN {
+                color: #526aa1;
+                cursor: pointer;
 
-                &:nth-child(2) {
-                    color: #526aa1;
-                    cursor: pointer;
-
-                    &:hover {
-                        text-decoration: underline;
-                    }
+                &:hover {
+                    text-decoration: underline;
                 }
             }
         }
     }
 }
-
+.clickBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12px;
+    height: 12px;
+    
+    .iconSort {
+        width: 15px;
+        height: 15px;
+        font-size: 12px;
+    }
+}
 /***** basic *****/
 .basic {
     
@@ -799,13 +810,14 @@
 }
 .popup {
     display: none;
-    position: absolute;
+    position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
     
     .message {
         position: absolute;
@@ -966,7 +978,7 @@
 .btn {
     position: absolute;
     bottom: 10px;
-    right: 10px;
+    right: 0;
     text-align: right;
     
     .btnCommon {

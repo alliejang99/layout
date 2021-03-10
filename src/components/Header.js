@@ -8,14 +8,24 @@ function Header() {
             <h1 className="headerTitle">Admin</h1>
             
             {/* searchBox */}
-            <button type="button" className="searchBox">
+            {/* <button type="button" className="searchBox">
                 <BsSearch style={{
                         paddingLeft: '7px',
                         color: '#fff'
                     }}
                 />
-                <span className="search"></span>
-            </button>
+                
+            </button> */}
+            <div className="searchBox">
+                <BsSearch style={{
+                        paddingLeft: '7px',
+                        paddingRight: '7px',
+                        color: '#fff',
+                        cursor: 'pointer'
+                    }}
+                />
+                <input className="search" type="text" />
+            </div>
 
             {/* info */}
             <ul className="info">

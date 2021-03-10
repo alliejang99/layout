@@ -1,16 +1,87 @@
+const arr = [];
+console.log(arr);
+// 오름차순 정렬
+arr.sort((a, b) => a - b);
+
+// 내림차순 정렬
+arr.sort((a, b) => b - a);
+
+
+
+
+////////////////////////////////
 import React from 'react';
-// import ServiceScript from './ServiceScript';
 
 function SelectAll() {
-    const numbering = ['1','2','3','4']
+    const numbering = [
+        {
+            id: 1,
+            name: '1',
+            serveN: '기계전사 v',
+            ver: '1.4.1',
+            sum1: '5,000,000 건',
+            sum2: '1,000,000 원',
+            sum3: '30,120,000 원',
+            sum4: '10,812 명',
+        },
+        {
+            id: 2,
+            name: '2',
+            serveN: '기계전사 v',
+            ver: '1.4.1',
+            sum1: '5,000,000 건',
+            sum2: '1,000,000 원',
+            sum3: '30,120,000 원',
+            sum4: '10,812 명',
+        },
+        {
+            id: 3,
+            name: '3',
+            serveN: '기계전사 v',
+            ver: '1.4.1',
+            sum1: '5,000,000 건',
+            sum2: '1,000,000 원',
+            sum3: '30,120,000 원',
+        },
+        {
+            id: 4,
+            name: '4',
+            serveN: '기계전사 v',
+            ver: '1.4.1',
+            sum1: '5,000,000 건',
+            sum2: '1,000,000 원',
+            sum3: '30,120,000 원',
+        }
+    ]
     return (
-        <ul className="boardTit">
-            <li className="num">{numbering[0]}</li>
-            <li className="num">{numbering[1]}</li>
-            <li className="num">{numbering[2]}</li>
-        </ul>
+        numbering.map( numbering =>
+            <ul className="boardTxt">
+                <li className="num">
+                    {numbering.id}
+                </li>
+                <li className="serveN">
+                    {numbering.serveN}
+                </li>
+                <li className="ver">
+                    {numbering.ver}
+                </li>
+                <li className="sum1">
+                    {numbering.sum1}
+                </li>
+                <li className="sum2">
+                    {numbering.sum2}
+                </li>
+                <li className="sum3">
+                    {numbering.sum3}
+                </li>
+                <li className="sum4">
+                    {numbering.sum4}
+                </li>
+            </ul>
+        )
     )
 }
+
 
 function Service() {
 
@@ -25,7 +96,7 @@ function Service() {
                             type="checkbox"
                             name="service"
                             id="service"
-                            onClick={ () => SelectAll()}
+                            // onClick={ () => SelectAll()}
                         />
                         <div className="iconSort">▼</div>
                     </li>
@@ -45,16 +116,20 @@ function Service() {
                         /> 
                         <div className="iconSort"></div>
                     </li>
-                    <li className="num">1</li>
-                    <li className="serveN">기계전사 v</li>
-                    <li className="ver">1.4.1</li>
-                    <li className="sum1">5,000,000 건</li>
-                    <li className="sum2">1,000,000 원</li>
-                    <li className="sum3">30,120,000 원</li>
-                    <li className="sum4">10,812 명</li>
+                    <SelectAll
+                        key={SelectAll.id}
+                        id={SelectAll.id}
+                        name={SelectAll.name}
+                        serveN={SelectAll.serveN}
+                        ver={SelectAll.ver}
+                        sum1={SelectAll.sum1}
+                        sum2={SelectAll.sum2}
+                        sum3={SelectAll.sum3}
+                        sum4={SelectAll.sum4}
+                    />
                 </ul>
 
-                <ul className="boardTxt">
+                {/* <ul className="boardTxt">
                     <li className="clickBox">
                         <input
                             input type="checkbox" name="checkRow"
@@ -100,7 +175,7 @@ function Service() {
                     <li className="sum2">1,000,000,000 원</li>
                     <li className="sum3">2,563,000 원</li>
                     <li className="sum4">156,390 명</li>
-                </ul>
+                </ul> */}
             </div>
             {/* <ServiceScript /> */}
         </section>

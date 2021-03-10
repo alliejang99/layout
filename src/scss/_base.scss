@@ -3,14 +3,14 @@
     padding: 0;
 	cursor: default;
 }
+
 html,
 body {
 	position: relative;
     overflow-x: hidden;
 	background-image: linear-gradient(-255deg, #7085B6 0%, #87A7D9 50%, #DEF3F8 100%);
 	width: 100%;
-    max-width: 100%;
-    min-width: 100%;
+    height: 100vh;
 }
 
 li,
@@ -18,13 +18,15 @@ ul {
     list-style: none;
     text-align: left;
 }
-button {
-	background: rgba(0, 0, 0, 0);
+option {
+    background: #ffff;
+    color: #7085B6;
 }
 button,input,optgroup,select,textarea {
 	margin:0;
 	padding: 0;
 	border:none;
+    background: rgba(0, 0, 0, 0);
 	box-shadow:none;
 }
 button,input {
@@ -46,8 +48,11 @@ a {
 }
 
 /***** common *****/
+.clickBox {
+    flex: 0 0 2%;
+}
 .num {
-    flex: 0 0 5%;
+    flex: 0 0 3%;
     text-align: center;
 }
 .serveN {
