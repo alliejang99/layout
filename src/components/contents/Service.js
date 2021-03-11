@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Example from "./Exaple";
 
 function Service() {
     const [serviceState, setServeState] = useState([]);
@@ -49,7 +50,7 @@ function Service() {
 
         setServeState(
             serviceState.map(d=>{
-                return{
+                return {
                     select: false,
                     id: d.id,
                     num: d.num,
@@ -62,64 +63,66 @@ function Service() {
                 };
             })
         );
-    }, [])
+    }, []);
 
     return (
         <section className="serviceList">
             <h2>Service List</h2>
-                <div className="boardBox">
-                    <ul className="boardTit">
-                        <li className="clickBox">
-                            <input
-                                type="checkbox"
-                                onChange={e => {
-                                    let checked = e.target.checked;
-                                    setServeState(
-                                        serviceState.map(d => {
+            <div className="boardBox">
+                <ul className="boardTit">
+                    <li className="clickBox">
+                        <input
+                            type="checkbox"
+                            onChange={e => {
+                                let checked = e.target.checked;
+                                setServeState(
+                                    serviceState.map(d => {
                                         d.select = checked;
                                         return d;
+                                    })
+                                );
+                            }}
+                        />
+                        <Example />
+                    </li>
+                    <li className="num">순위</li>
+                    <li className="serveN">서비스명</li>
+                    <li className="ver">M ver.</li>
+                    <li className="sum1">DAU</li>
+                    <li className="sum2">매출</li>
+                    <li className="sum3">과금</li>
+                    <li className="sum4">신규가입자</li>
+                </ul>
+                {serviceState.map((d)=>(
+                    <ul className="boardTxt" key = {d.id}>
+                        <li className="clickBox">
+                            <input 
+                                onChange={event => {
+                                    let checked = event.target.checked;
+                                    setServeState(
+                                        serviceState.map(data => {
+                                            if (d.id === data.id) {
+                                                data.select = checked
+                                            }
+                                            return data;
                                         })
                                     );
                                 }}
+                                type="checkbox"
+                                checked={d.select}
                             />
+                            <div className="iconSort"></div>
                         </li>
-                        <li className="num">순위</li>
-                        <li className="serveN">서비스명</li>
-                        <li className="ver">M ver.</li>
-                        <li className="sum1">DAU</li>
-                        <li className="sum2">매출</li>
-                        <li className="sum3">과금</li>
-                        <li className="sum4">신규가입자</li>
+                        <li className="num">{d.num}</li>
+                        <li className="serveN">{d.serveN}</li>
+                        <li className="ver">{d.ver}</li>
+                        <li className="sum1">{d.sum1}</li>
+                        <li className="sum2">{d.sum2}</li>
+                        <li className="sum3">{d.sum3}</li>
+                        <li className="sum4">{d.sum4}</li>
                     </ul>
-                    {serviceState.map((d)=>(
-                        <ul className="boardTit" key = {d.id}>
-                            <li className="clickBox">
-                                <input 
-                                    onChange={event => {
-                                        let checked = event.target.checked;
-                                        setServeState(
-                                            serviceState.map(data => {
-                                                if (d.id === data.id) {
-                                                    data.select = checked;
-                                                }
-                                                return data;
-                                            })
-                                        );
-                                    }}
-                                    type="checkbox"
-                                    checked={d.select}
-                                />
-                            </li>
-                            <li className="num">{d.num}</li>
-                            <li className="serveN">{d.serveN}</li>
-                            <li className="ver">{d.ver}</li>
-                            <li className="sum1">{d.sum1}</li>
-                            <li className="sum2">{d.sum2}</li>
-                            <li className="sum3">{d.sum3}</li>
-                            <li className="sum4">{d.sum4}</li>
-                        </ul>
-                    ))}
-                </div>
+                ))}
+            </div>
         </section>
     )
 }
