@@ -1,108 +1,125 @@
-import React from 'react';
-// import ServiceScript from './ServiceScript';
-
-function SelectAll() {
-    const numbering = ['1','2','3','4']
-    return (
-        <ul className="boardTit">
-            <li className="num">{numbering[0]}</li>
-            <li className="num">{numbering[1]}</li>
-            <li className="num">{numbering[2]}</li>
-        </ul>
-    )
-}
+import React, { useState, useEffect } from "react";
 
 function Service() {
+    const [serviceState, setServeState] = useState([]);
+
+    useEffect(()=>{
+        let serviceState = [
+            {
+                id: 1,
+                num: '1',
+                serveN: '기계전사 v',
+                ver: '1.4.1',
+                sum1: '5,000,000 건',
+                sum2:'1,000,000 원',
+                sum3: '30,120,000 원',
+                sum4: '10,812 명',
+            },
+            {
+                id: 2,
+                num: '2',
+                serveN: '기계전사v Kakao',
+                ver: '1.0.1',
+                sum1: '23,120 건',
+                sum2:'1,000,000 원',
+                sum3: '30,120,000 원',
+                sum4: '10,812 명',
+            },
+            {
+                id: 3,
+                num: '3',
+                serveN: '기계전사v Tstore',
+                ver: '1.0.1',
+                sum1: '23,120 건',
+                sum2:'1,000,000 원',
+                sum3: '30,120,000 원',
+                sum4: '10,812 명',
+            },
+            {
+                id: 4,
+                num: '4',
+                serveN: '기계전사v Oz',
+                ver: '1.0.1',
+                sum1: '23,120 건',
+                sum2:'1,000,000 원',
+                sum3: '30,120,000 원',
+                sum4: '10,812 명',
+            },
+        ];
+
+        setServeState(
+            serviceState.map(d=>{
+                return{
+                    select: false,
+                    id: d.id,
+                    num: d.num,
+                    serveN: d.serveN,
+                    ver: d.ver,
+                    sum1: d.sum1,
+                    sum2: d.sum2,
+                    sum3: d.sum3,
+                    sum4: d.sum4,
+                };
+            })
+        );
+    }, [])
 
     return (
         <section className="serviceList">
             <h2>Service List</h2>
-            <div className="boardBox">
-                <ul className="boardTit">
-                    <li className="clickBox">
-                        <input
-                            className="check"
-                            type="checkbox"
-                            name="service"
-                            id="service"
-                            onClick={ () => SelectAll()}
-                        />
-                        <div className="iconSort">▼</div>
-                    </li>
-                    <li className="num">순위</li>
-                    <li className="serveN">서비스명</li>
-                    <li className="ver">M ver.</li>
-                    <li className="sum1">DAU</li>
-                    <li className="sum2">매출</li>
-                    <li className="sum3">과금</li>
-                    <li className="sum4">신규가입자</li>
-                </ul>
-
-                <ul className="boardTxt">
-                    <li className="clickBox">
-                        <input
-                            input type="checkbox" name="checkRow"
-                        /> 
-                        <div className="iconSort"></div>
-                    </li>
-                    <li className="num">1</li>
-                    <li className="serveN">기계전사 v</li>
-                    <li className="ver">1.4.1</li>
-                    <li className="sum1">5,000,000 건</li>
-                    <li className="sum2">1,000,000 원</li>
-                    <li className="sum3">30,120,000 원</li>
-                    <li className="sum4">10,812 명</li>
-                </ul>
-
-                <ul className="boardTxt">
-                    <li className="clickBox">
-                        <input
-                            input type="checkbox" name="checkRow"
-                        /> 
-                        <div className="iconSort"></div>
-                    </li>
-                    <li className="num">2</li>
-                    <li className="serveN">기계전사v Kakao</li>
-                    <li className="ver">1.4.1</li>
-                    <li className="sum1">23,120 건</li>
-                    <li className="sum2">10,860,000 원</li>
-                    <li className="sum3">30,000,000 원</li>
-                    <li className="sum4">192,712,890 명</li>
-                </ul>
-
-                <ul className="boardTxt">
-                    <li className="clickBox">
-                        <input
-                            input type="checkbox" name="checkRow"
-                        /> 
-                        <div className="iconSort"></div>
-                    </li>
-                    <li className="num">3</li>
-                    <li className="serveN">기계전사v Tstore</li>
-                    <li className="ver">1.0.1</li>
-                    <li className="sum1">1,002,330 건</li>
-                    <li className="sum2">100,000 원</li>
-                    <li className="sum3">121,230,000 원</li>
-                    <li className="sum4">1,377,455 명</li>
-                </ul>
-
-                <ul className="boardTxt">
-                    <li className="clickBox">
-                        <input
-                            input type="checkbox" name="checkRow"
-                        /> 
-                        <div className="iconSort"></div>
-                    </li>
-                    <li className="num">4</li>
-                    <li className="serveN">기계전사v Oz</li>
-                    <li className="ver">1.2.1</li>
-                    <li className="sum1">100,098 건</li>
-                    <li className="sum2">1,000,000,000 원</li>
-                    <li className="sum3">2,563,000 원</li>
-                    <li className="sum4">156,390 명</li>
-                </ul>
-            </div>
-            {/* <ServiceScript /> */}
+                <div className="boardBox">
+                    <ul className="boardTit">
+                        <li className="clickBox">
+                            <input
+                                type="checkbox"
+                                onChange={e => {
+                                    let checked = e.target.checked;
+                                    setServeState(
+                                        serviceState.map(d => {
+                                        d.select = checked;
+                                        return d;
+                                        })
+                                    );
+                                }}
+                            />
+                        </li>
+                        <li className="num">순위</li>
+                        <li className="serveN">서비스명</li>
+                        <li className="ver">M ver.</li>
+                        <li className="sum1">DAU</li>
+                        <li className="sum2">매출</li>
+                        <li className="sum3">과금</li>
+                        <li className="sum4">신규가입자</li>
+                    </ul>
+                    {serviceState.map((d)=>(
+                        <ul className="boardTit" key = {d.id}>
+                            <li className="clickBox">
+                                <input 
+                                    onChange={event => {
+                                        let checked = event.target.checked;
+                                        setServeState(
+                                            serviceState.map(data => {
+                                                if (d.id === data.id) {
+                                                    data.select = checked;
+                                                }
+                                                return data;
+                                            })
+                                        );
+                                    }}
+                                    type="checkbox"
+                                    checked={d.select}
+                                />
+                            </li>
+                            <li className="num">{d.num}</li>
+                            <li className="serveN">{d.serveN}</li>
+                            <li className="ver">{d.ver}</li>
+                            <li className="sum1">{d.sum1}</li>
+                            <li className="sum2">{d.sum2}</li>
+                            <li className="sum3">{d.sum3}</li>
+                            <li className="sum4">{d.sum4}</li>
+                        </ul>
+                    ))}
+                </div>
         </section>
     )
 }
