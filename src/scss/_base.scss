@@ -1,81 +1,99 @@
 * {
-    margin: 0;
-    padding: 0;
-	cursor: default;
+  margin: 0;
+  padding: 0;
+  cursor: default;
 }
 
 html,
 body {
-	position: relative;
-    overflow-x: hidden;
-	background-image: linear-gradient(-255deg, #7085B6 0%, #87A7D9 100%);
-	width: 100%;
-    height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  background-image: linear-gradient(-255deg, #7085b6 0%, #87a7d9 100%);
+  width: 100%;
+  height: 100vh;
 }
 
 li,
 ul {
-    list-style: none;
-    text-align: left;
+  list-style: none;
+  text-align: left;
 }
 option {
-    background: #ffff;
-    color: #7085B6;
+  background: #ffff;
+  color: #7085b6;
 }
-button,input,optgroup,select,textarea {
-	margin:0;
-	padding: 0;
-	border:none;
-    background: rgba(0, 0, 0, 0);
-	box-shadow:none;
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: rgba(0, 0, 0, 0);
+  box-shadow: none;
 }
-button,input {
-	overflow: visible;
+button,
+input {
+  overflow: visible;
 }
-button,select {
-	text-transform:none;
+button,
+select {
+  text-transform: none;
 }
 
 address {
-	text-decoration: none;
-	font-style: normal;
-	text-transform: capitalize;
+  text-decoration: none;
+  font-style: normal;
+  text-transform: capitalize;
 }
 
 a {
-	text-decoration: none;
-	font-style: normal;
+  text-decoration: none;
+  font-style: normal;
+  outline: none;
+  cursor: pointer;
 }
 
 /***** common *****/
 .clickBox {
-    flex: 0 0 3%;
+  flex: 0 0 3%;
 }
 .num {
-    flex: 0 0 3%;
-    text-align: center;
+  flex: 0 0 3%;
+  text-align: center;
 }
 .serveN {
-    flex: 0 0 10%;
-    text-align: center;
+  flex: 0 0 10%;
+  text-align: center;
 }
-.ver { 
-    flex: 0 0 5%;
-    text-align: center;
+.ver {
+  flex: 0 0 5%;
+  text-align: center;
 }
 .sum1 {
-    flex: 0 0 15%;
-    text-align: center;
+  flex: 0 0 15%;
+  text-align: center;
 }
 .sum2 {
-    flex: 0 0 15%;
-    text-align: center;
+  flex: 0 0 15%;
+  text-align: center;
 }
 .sum3 {
-    flex: 0 0 15%;
-    text-align: center;
+  flex: 0 0 15%;
+  text-align: center;
 }
 .sum4 {
-    flex: 0 0 15%;
-    text-align: center;
+  flex: 0 0 15%;
+  text-align: center;
+}
+
+
+/* IR 효과 */
+.ir_pm {
+  display: block;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
 }

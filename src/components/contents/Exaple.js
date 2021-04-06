@@ -1,4 +1,5 @@
 import React from "react";
+
 // const arr = [10,100,514,200];
 // console.log(arr);
 // 오름차순 정렬
@@ -14,9 +15,11 @@ export default class Example extends React.Component {
         this.state = {isToggleOn: true};
 
         this.handleClick = this.handleClick.bind(this);
+        console.log(props);
     }
 
-    handleClick() {
+    handleClick(props) {
+        // this.props.test()
         this.setState(prevState => ({
             isToggleOn: !prevState.isToggleOn
         }));

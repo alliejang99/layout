@@ -1,24 +1,22 @@
-import React from 'react';
-import ReactPaginate from "react-paginate";
-import Btn from './Btn';
-
+import React, { useState } from "react";
+import Btn from "./Btn";
 
 function Paging() {
-    return (
-        <div className="paging">
-            <ReactPaginate
-                // pageCount={Math.ceil(totalRecords / 10)}
-                pageRangeDisplayed={10}
-                marginPagesDisplayed={10}
-                breakLabel={""}
-                previousLabel={"prev"}
-                nextLabel={"next"}
-                activeClassName={"currentPage"}
-                previousClassName={"btnPage"}
-                nextClassName={"btnPage"}
-            />
-            <Btn />
-        </div>
-    )
+
+  const [active, setActive] = useState(false)
+  const [pageNum, setPageNum] = useState(['1','2','3','4','5','6','7','8','9','10'])
+
+
+
+  return (
+    <div className="btnBox">
+      <div className="paging">
+        <button className="pn">prev</button>
+        <button className={active ? 'current' : 'btnPage'}>{pageNum}</button>
+        <button className="pn">next</button>
+      </div>
+      <Btn />
+    </div>
+  );
 }
 export default Paging;

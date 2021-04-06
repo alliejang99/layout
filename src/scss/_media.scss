@@ -1,247 +1,296 @@
 @media (max-width: 1700px) {
-    .columns .userKocht .kocht {
-        .groupIcon {
-            padding-left: 20px;
-            transition: all .3s;
-            .text {
-                padding-left: 20px;
-            }
-        }
+  .columns .userKocht .kocht {
+    .groupIcon {
+      padding-left: 20px;
+      transition: all 0.3s;
+      .text {
+        padding-left: 20px;
+      }
     }
+  }
 }
 
 @media (max-width: 1540px) {
-    .columns {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 330px;
-        transition: all .3s;
+  .columns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 330px;
+    transition: all 0.3s;
 
-        .userKocht {
-            width: 100%;
+    .userKocht {
+      width: 100%;
 
-            .kocht{
-                display: block;
+      .kocht {
+        display: block;
 
-                .groupIcon {
-                    padding-left: 30px;
-                    transition: all .3s;
-                    .text {
-                        padding-left: 30px;
-                    }
-                }
-
-                .vsKocht .vsBox {
-                    width: 40vw;
-                }
-            }
+        .groupIcon {
+          padding-left: 30px;
+          transition: all 0.3s;
+          .text {
+            padding-left: 30px;
+          }
         }
+
+        .vsKocht .vsBox {
+          width: 40vw;
+        }
+      }
     }
-    .nav .navService  .serviceTable {
-        height: 885px;
-    }
-    
-    .paging{
-        justify-content: start;        
-    }
+  }
+  .nav .navService .serviceTable {
+    height: 885px;
+  }
+
+  .paging {
+    width: 50%;
+  }
 }
 
 @media (max-width: 1090px) {
-    .nav .navService  .serviceTable {
-        height: 1287px;
+  .nav .navService .serviceTable {
+    height: 1287px;
+  }
+  .basic .basicList {
+    display: block;
+
+    .flex {
+      margin-top: 10px;
     }
-    .basic .basicList {
-        display: block;
-        
-        .flex {
-            margin-top: 10px;
-        }
-    }
-} 
+  }
+}
 
 @media (max-width: 905px) {
-    .nav {
-        width: 100%;
-        height: 265px;
+  .nav {
+    width: 100%;
+    height: 265px;
 
-        .navService {
-            .service {
-                display: none;
-            }
-        }
+    .navService {
+      .service {
+        display: none;
+      }
     }
+  }
 
-    .contents {
-        width: 96vw;
-        height: 100%;
-        float: left;
-        margin: 10px 10px 10px 10px;
-    }
+  .contents {
+    width: 96vw;
+    height: 100%;
+    float: left;
+    margin: 10px 10px 10px 10px;
+  }
 
-    .paging ul {
-        padding-right: 0;
-    }
+  .paging ul {
+    padding-right: 0;
+  }
 }
 
 @media (max-width: 730px) {
-    .contents {
-        width: 95vw;
-        height: 100%;
-        float: left;
-        margin: 10px 10px 10px 10px;
+  .contents {
+    width: 95vw;
+    height: 100%;
+    float: left;
+    margin: 10px 10px 10px 10px;
+  }
+  .analytics .boardBox .boardTit,
+  .analytics .boardBox .boardTxt,
+  .analytics .boardBox .boardTxt li,
+  .serviceList .boardBox .boardTit,
+  .serviceList .boardBox .boardTxt li {
+    padding: 0;
+    line-height: 40px;
+  }
+  .serviceList .boardBox .boardTit {
+    padding: 0 5px;
+  }
+  .serviceList .boardBox .boardTit {
+    .clickBox {
+      flex: 0 0 2%;
     }
-    .analytics .boardBox .boardTit,
-    .analytics .boardBox .boardTxt,
-    .analytics .boardBox .boardTxt li, 
-    .serviceList .boardBox .boardTit,
-    .serviceList .boardBox .boardTxt li {
-        padding: 0;
-        line-height: 40px;
+    .num {
+      flex: 0 0 3%;
     }
-    .serviceList .boardBox .boardTit {
-        padding: 0 5px;
+    .serveN {
+      flex: 0 0 20%;
     }
-    .serviceList .boardBox .boardTit {
-        .clickBox {flex: 0 0 2%;}
-        .num    {flex: 0 0 3%;}
-        .serveN {flex: 0 0 20%;}
-        .ver    {flex: 0 0 8%;}
-        .sum1   {flex: 0 0 15%;}
-        .sum2   {flex: 0 0 20%;}
-        .sum3   {flex: 0 0 15%;}
-        .sum4   {flex: 0 0 15%;}
+    .ver {
+      flex: 0 0 8%;
     }
-    .serviceList .boardBox .boardTxt {
-        .clickBox {flex: 0 0 2%;}
-        .num    {flex: 0 0 3%;}
-        .serveN {flex: 0 0 20%;}
-        .ver    {flex: 0 0 8%;}
-        .sum1   {flex: 0 0 15%;}
-        .sum2   {flex: 0 0 20%;}
-        .sum3   {flex: 0 0 15%;}
-        .sum4   {flex: 0 0 15%;}
+    .sum1 {
+      flex: 0 0 15%;
     }
+    .sum2 {
+      flex: 0 0 20%;
+    }
+    .sum3 {
+      flex: 0 0 15%;
+    }
+    .sum4 {
+      flex: 0 0 15%;
+    }
+  }
+  .serviceList .boardBox .boardTxt {
+    .clickBox {
+      flex: 0 0 2%;
+    }
+    .num {
+      flex: 0 0 3%;
+    }
+    .serveN {
+      flex: 0 0 20%;
+    }
+    .ver {
+      flex: 0 0 8%;
+    }
+    .sum1 {
+      flex: 0 0 15%;
+    }
+    .sum2 {
+      flex: 0 0 20%;
+    }
+    .sum3 {
+      flex: 0 0 15%;
+    }
+    .sum4 {
+      flex: 0 0 15%;
+    }
+  }
 }
 
 @media (max-width: 690px) {
-    .paging {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 30px;
-        
-        ul {
-            margin-top: 80px;
-        }
-    }
+  .paging {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
 
-    .btn {
-        position: absolute;
-        bottom: auto;
-        right: auto;
+    ul {
+      margin-top: 80px;
     }
+  }
+
+  .btn {
+    display: flex;
+    width: 25%;
+    margin-bottom: 30px;
+    
+    .btnCommon {
+      width: 40px;
+      font-size: 12px;
+    }
+  }
 }
 
 @media (max-width: 675px) {
-    .columns .userKocht .kocht .groupIcon,
-    .columns .userKocht .kocht .groupIcon .text {
-        padding-left: 5px;
-        transition: all .3s;
-    }
+  .columns .userKocht .kocht .groupIcon,
+  .columns .userKocht .kocht .groupIcon .text {
+    padding-left: 5px;
+    transition: all 0.3s;
+  }
 }
 
 @media (max-width: 655px) {
-    .header .searchBox {
-        margin: 0 5px;
-    }
+  .header .searchBox {
+    margin: 0 5px;
+  }
 
-    .contents {
-        width: 94vw;
-    }
-    .columns .userKocht .kocht .groupIcon {
-        width: 24px;
-        height: 24px;
-        
-        .iconBar1 {
-            position: absolute;
-            top: 55px;
-            left: 5px;
-            content: '';
-            width: 20px;
-            height: 5px;
-            border-radius: 3px;
-            background: #fff;
-            cursor: pointer;
-            transition: all .3s;
-        }
-        .iconBar2 {
-            position: absolute;
-            top: 55px;
-            left: 5px;
-            transform: rotate(90deg);
-            content: '';
-            width: 20px;
-            height: 5px;
-            border-radius: 3px;
-            background: #fff;
-            cursor: pointer;
-            transition: all .3s;
-        }
-        .text {
-            display: none;
-        }
-    }
+  .contents {
+    width: 94vw;
+  }
+  .columns .userKocht .kocht .groupIcon {
+    width: 24px;
+    height: 24px;
 
-    .popup .message {
-        width: 400px;
-        height: 500px;
-        transition: all .3s;
-
-        .messageText {
-            width: 360px;
-            height: 400px;
-            transition: all .3s;
-        }
+    .iconBar1 {
+      position: absolute;
+      top: 55px;
+      left: 5px;
+      content: "";
+      width: 20px;
+      height: 5px;
+      border-radius: 3px;
+      background: #fff;
+      cursor: pointer;
+      transition: all 0.3s;
     }
+    .iconBar2 {
+      position: absolute;
+      top: 55px;
+      left: 5px;
+      transform: rotate(90deg);
+      content: "";
+      width: 20px;
+      height: 5px;
+      border-radius: 3px;
+      background: #fff;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .text {
+      display: none;
+    }
+  }
+
+  .popup .message {
+    width: 400px;
+    height: 500px;
+    transition: all 0.3s;
+
+    .messageText {
+      width: 360px;
+      height: 400px;
+      transition: all 0.3s;
+    }
+  }
 }
 @media (max-width: 560px) {
-    .contents {
-        width: 93vw;
-    }
+  .contents {
+    width: 93vw;
+  }
+  .btn {
+    width: 30%;
+  }
 }
 @media (max-width: 500px) {
-    .popup .message {
-        width: 300px;
-        height: 400px;
-        transition: all .3s;
+  .popup .message {
+    width: 300px;
+    height: 400px;
+    transition: all 0.3s;
 
-        .messageText {
-            width: 260px;
-            height: 300px;
-            transition: all .3s;
-        }
+    .messageText {
+      width: 260px;
+      height: 300px;
+      transition: all 0.3s;
     }
-    .popup .message .btnYN {
-        top: 85%;
-        .btnValue {
-            width: 100px;
-        }
+  }
+  .popup .message .btnYN {
+    top: 85%;
+
+    .btnValue {
+      width: 100px;
     }
+  }
 }
 @media (max-width: 360px) {
-    .paging ul {
-        
-        li {
-            width: 20px;
-            height: 20px;
-            font-size: 14px;
-            line-height: 20px;
-            margin: 0 1px 0 1px;
-        }
-        
-        .btnPage {
-            margin: 0;
-        }
+  .btnBox {
+    position: relative;
+    display: block;
+
+    .paging {
+      width: 100%;
+      margin-top: 40px;
+      margin-bottom: 0;
+      padding-left: 5px;
     }
+    .btn {
+      position: absolute;
+      top: -30px;
+      left: 90px;
+      width: 100%;
+      margin-bottom: 0;
+
+      .btnCommon {
+        height: 25px;
+      }
+    }
+  }
 }
